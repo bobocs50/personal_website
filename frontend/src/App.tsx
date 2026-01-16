@@ -14,7 +14,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <div className="bg-slate-950 text-slate-50 min-h-screen">
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
