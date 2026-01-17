@@ -3,7 +3,7 @@ import { GraduationCap, Award } from "lucide-react";
 import { CERTIFICATIONS } from "@/data";
 
 const Education = () => (
-  <section id="education" className="section-padding">
+  <section id="education" className="section-padding bg-gradient-to-b from-slate-900/50 to-slate-950">
     <div className="container-narrow">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

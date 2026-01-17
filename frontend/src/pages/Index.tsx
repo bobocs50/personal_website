@@ -6,11 +6,11 @@ import { Hero, Experience, Projects, Skills, Education, Contact } from "@/compon
 const Index = () => (
   <main className="min-h-screen bg-background relative">
     <FloatingOrbs />
-    <div className="fixed inset-0 bg-grid pointer-events-none" />
     <div className="fixed inset-0 bg-gradient-radial pointer-events-none" />
     <div className="fixed inset-0 bg-gradient-bottom pointer-events-none" />
+    <div className="fixed inset-0 bg-grid pointer-events-none z-20" />
 
-    <div className="relative z-10">
+    <div className="relative z-30">
       <Navbar />
       <Hero />
       <Experience />

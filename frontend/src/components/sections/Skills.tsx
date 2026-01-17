@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SKILLS } from "@/data";
 
 const Skills = () => (
-  <section id="skills" className="section-padding">
+  <section id="skills" className="section-padding bg-gradient-to-b from-slate-950 to-slate-900/50">
     <div className="container-narrow">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

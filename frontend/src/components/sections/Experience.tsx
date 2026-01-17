@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience, index }: { experience: Experience; index: 
 );
 
 const Experience = () => (
-  <section id="experience" className="section-padding">
+  <section id="experience" className="section-padding bg-gradient-to-b from-slate-950 to-slate-900/50">
     <div className="container-narrow">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
