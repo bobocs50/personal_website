@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, ArrowDown, FileText } from "lucide-react";
 import { CONTACT } from "@/data";
 import philippPhoto from "@/assets/philipp-photo.jpg";
+import resume from "@/assets/PhilCV.pdf";
 
 const Hero = () => (
   <section className="min-h-screen flex flex-col justify-center relative section-padding overflow-hidden">
@@ -82,13 +83,14 @@ const Hero = () => (
             {[
               { href: CONTACT.github, icon: Github, label: "GitHub" },
               { href: CONTACT.linkedin, icon: Linkedin, label: "LinkedIn" },
-              { href: `mailto:${CONTACT.email}`, icon: Mail, label: "Email" },
-            ].map(({ href, icon: Icon, label }) => (
+              { href: resume, icon: FileText, label: "Resume", download: "Philipp-Huynh-Resume.pdf" },
+            ].map(({ href, icon: Icon, label, download }) => (
               <a
                 key={label}
                 href={href}
-                target={href.startsWith("mailto") ? undefined : "_blank"}
-                rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                download={download}
+                target={download ? undefined : "_blank"}
+                rel={download ? undefined : "noopener noreferrer"}
                 className="p-3 rounded-lg bg-slate-900/50 hover:bg-slate-800 hover:shadow-glow-md border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 group"
                 aria-label={label}
               >

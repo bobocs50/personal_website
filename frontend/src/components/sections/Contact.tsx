@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, ArrowRight } from "lucide-react";
+import { Mail, Github, Linkedin, ArrowRight, FileText } from "lucide-react";
 import { CONTACT } from "@/data";
+import resume from "@/assets/PhilCV.pdf";
 
 const Contact = () => (
   <section id="contact" className="section-padding bg-gradient-to-b from-slate-950 to-slate-900/50">
@@ -33,6 +34,16 @@ const Contact = () => (
           <Mail className="w-5 h-5" />
           Say Hello
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </a>
+
+        {/* Resume Download */}
+        <a
+          href={resume}
+          download="Philipp-Huynh-Resume.pdf"
+          className="group inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-slate-900/50 border border-slate-800 text-slate-50 font-semibold hover:border-cyan-500/50 hover:bg-slate-900 transition-all duration-300"
+        >
+          <FileText className="w-5 h-5 group-hover:text-cyan-400 transition-colors" />
+          Resume
         </a>
 
         {/* Secondary CTAs */}
