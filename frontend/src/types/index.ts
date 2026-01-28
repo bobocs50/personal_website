@@ -23,3 +23,11 @@ export interface NavLink {
   label: string;
   href: string;
 }
+
+export interface Education {
+  type: "university" | "highschool";
+  title: string;
+  institution: string;
+  period: string;
+  highlights?: string[];
+}

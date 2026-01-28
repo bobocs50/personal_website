@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Award } from "lucide-react";
-import { CERTIFICATIONS } from "@/data";
+import { EDUCATION, CERTIFICATIONS } from "@/data";
+import uniPotsdam from "@/assets/unipotsdam_icon.png";
+import sogang from "@/assets/sogang_icon.png";
 
 const Education = () => (
   <section id="education" className="section-padding bg-gradient-to-b from-slate-900/50 to-slate-950">
@@ -19,63 +21,50 @@ const Education = () => (
       </motion.div>
 
       <div className="space-y-6">
-        {/* University */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="group relative p-6 md:p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 hover:bg-slate-900/80 transition-all duration-300"
-        >
-          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-br from-cyan-500/10 to-transparent" />
+        {/* Education Items */}
+        {EDUCATION.map((edu, index) => {
+          const logoSrc = edu.institution === "University of Potsdam" ? uniPotsdam : edu.institution === "Sogang University" ? sogang : uniPotsdam;
           
-          <div className="relative z-10 flex items-start gap-4">
-            <div className="p-3 rounded-lg bg-slate-800/50 border border-slate-700 group-hover:border-cyan-500/30 transition-colors">
-              <GraduationCap className="w-6 h-6 text-cyan-400" />
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 className="text-lg font-semibold text-slate-50">B.Sc. Business Informatics</h3>
-                <span className="text-slate-400 text-sm font-medium">Oct 2024 – Present</span>
+          return (
+            <motion.div
+              key={edu.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group relative p-6 md:p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 hover:bg-slate-900/80 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-br from-cyan-500/10 to-transparent" />
+              
+              <div className="relative z-10 flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-slate-800/50 border border-slate-700 group-hover:border-cyan-500/30 transition-colors">
+                  <img src={logoSrc} alt={edu.institution} className="w-6 h-6 object-cover" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                    <h3 className="text-lg font-semibold text-slate-50">{edu.title}</h3>
+                    <span className="text-slate-400 text-sm font-medium">{edu.period}</span>
+                  </div>
+                  <p className="text-cyan-400 font-medium">{edu.institution}</p>
+                  {edu.highlights && (
+                    <ul className="mt-3 text-sm text-slate-400 space-y-1">
+                      {edu.highlights.map((highlight) => (
+                        <li key={highlight}>• {highlight}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
-              <p className="text-cyan-400 font-medium">University of Potsdam</p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* High School */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="group relative p-6 md:p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 hover:bg-slate-900/80 transition-all duration-300"
-        >
-          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-br from-cyan-500/10 to-transparent" />
-          
-          <div className="relative z-10 flex items-start gap-4">
-            <div className="p-3 rounded-lg bg-slate-800/50 border border-slate-700 group-hover:border-cyan-500/30 transition-colors">
-              <GraduationCap className="w-6 h-6 text-cyan-400" />
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 className="text-lg font-semibold text-slate-50">Abitur (High School Diploma)</h3>
-                <span className="text-slate-400 text-sm font-medium">Graduated 2023</span>
-              </div>
-              <p className="text-cyan-400 font-medium mb-3">Burghard Gymnasium Buchen</p>
-              <ul className="text-sm text-slate-400 space-y-1">
-                <li>• STEM innovation camp in India</li>
-                <li>• Concertmaster in school symphony orchestra</li>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
+            </motion.div>
+          );
+        })}
 
         {/* Certifications */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: EDUCATION.length * 0.1 }}
           className="group relative p-6 md:p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 hover:bg-slate-900/80 transition-all duration-300"
         >
           <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-br from-cyan-500/10 to-transparent" />

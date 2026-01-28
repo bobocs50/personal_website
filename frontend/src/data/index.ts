@@ -1,4 +1,4 @@
-import { Experience, Project, SkillCategory, NavLink } from "@/types";
+import { Experience, Project, SkillCategory, NavLink, Education } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Experience", href: "#experience" },
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     subtitle: "BigBerlinHack",
     description:
       "Financial assistant prototype automating expense tracking, reducing manual entry time by 60%.",
-    tech: ["n8n", "React", "Express"],
+    tech: ["n8n", "React", "Express.js","OpenAI"],
     badge: "Hackathon",
   },
   {
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
     subtitle: "Hackathon Winner 🏆",
     description:
       "AI-driven platform integrating Spotify API for emotion-based playlists with real-time sentiment analysis.",
-    tech: ["Hugging Face", "Spotify API", "React"],
+    tech: ["Hugging Face", "Spotify API", "React","Express.js"],
     badge: "Winner",
   },
   {
@@ -63,11 +63,33 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS: SkillCategory[] = [
   { title: "Languages", skills: ["Python", "TypeScript", "C", "Java"] },
-  { title: "Frontend", skills: ["React", "Tailwind CSS", "Next.js"] },
+  { title: "Frontend", skills: ["React", "Tailwind CSS"] },
   { title: "Backend", skills: ["Node.js", "Express.js", "Flask", "TypeORM"] },
   { title: "AI/ML", skills: ["Haystack", "Hugging Face"] },
   { title: "Tools", skills: ["Docker", "MySQL", "GitHub"] },
   { title: "Spoken", skills: ["German", "Korean", "English", "French"] },
+];
+
+export const EDUCATION: Education[] = [
+  {
+    type: "university",
+    title: "B.Sc. Business Informatics",
+    institution: "University of Potsdam",
+    period: "Oct 2024 – Present",
+  },
+  {
+    type: "university",
+    title: "KLEC Language Program",
+    institution: "Sogang University",
+    period: "Mar 2024 – May 2024",
+  },
+  {
+    type: "highschool",
+    title: "Abitur (High School Diploma)",
+    institution: "Burghard Gymnasium Buchen",
+    period: "Graduated 2023",
+    highlights: ["STEM innovation camp in India", "Concertmaster in school symphony orchestra"],
+  },
 ];
 
 export const CERTIFICATIONS = [
