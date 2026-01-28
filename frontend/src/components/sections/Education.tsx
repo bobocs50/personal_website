@@ -23,7 +23,8 @@ const Education = () => (
       <div className="space-y-6">
         {/* Education Items */}
         {EDUCATION.map((edu, index) => {
-          const logoSrc = edu.institution === "University of Potsdam" ? uniPotsdam : edu.institution === "Sogang University" ? sogang : uniPotsdam;
+          const isUniPotsdam = edu.institution === "University of Potsdam";
+          const isSogang = edu.institution === "Sogang University";
           
           return (
             <motion.div
@@ -38,7 +39,13 @@ const Education = () => (
               
               <div className="relative z-10 flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-slate-800/50 border border-slate-700 group-hover:border-cyan-500/30 transition-colors">
-                  <img src={logoSrc} alt={edu.institution} className="w-6 h-6 object-cover" />
+                  {isUniPotsdam ? (
+                    <img src={uniPotsdam} alt={edu.institution} className="w-6 h-6 object-cover" />
+                  ) : isSogang ? (
+                    <img src={sogang} alt={edu.institution} className="w-6 h-6 object-cover" />
+                  ) : (
+                    <GraduationCap className="w-6 h-6 text-cyan-400" />
+                  )}
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
