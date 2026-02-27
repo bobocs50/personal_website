@@ -7,8 +7,7 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-space-mono" });
 
 export const metadata: Metadata = {
-  title: 'frances zhao - designer, dreamer, doer',
-  description: 'designer, builder, and systems design engineering student @ uwaterloo',
+  title: 'Philipp Huynh'
 }
 
 export default function RootLayout({
