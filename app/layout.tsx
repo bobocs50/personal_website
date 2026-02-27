@@ -7,7 +7,11 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-space-mono" });
 
 export const metadata: Metadata = {
-  title: 'Philipp Huynh'
+  title: 'Philipp Huynh',
+  icons: {
+    icon: '/icons/philipp_icon.jpg',
+    apple: '/icons/philipp_icon.jpg',
+  },
 }
 
 export default function RootLayout({

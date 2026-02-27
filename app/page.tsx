@@ -8,9 +8,9 @@ const Portfolio = () => {
         <div className="mb-12">
           <p className="flex flex-wrap items-center gap-2 text-[1.8rem] font-normal leading-[1.7] text-[#1a1a1a] sm:text-[1.44rem] max-[420px]:text-[1.25rem]">
             Hi, my name is Philipp Huynh{" "}
-            <span className="relative ml-1 inline-block h-14 w-14 overflow-hidden rounded-full sm:h-12 sm:w-12 max-[420px]:h-11 max-[420px]:w-11">
+            <span className="relative ml-1 inline-block h-14 w-14 overflow-hidden rounded-full transition-transform duration-200 hover:scale-[1.02] sm:h-12 sm:w-12 max-[420px]:h-11 max-[420px]:w-11">
               <Image
-                src="/images/philipp_icon.jpg" 
+                src="/icons/philipp_icon.jpg" 
                 alt="Philipp Huynh"
                 fill
                 sizes="56px"
@@ -24,13 +24,13 @@ const Portfolio = () => {
         <div className="mb-10 sm:mb-8">
           <p className="mb-1 flex flex-wrap items-center gap-2 text-[1.8rem] font-normal leading-[1.7] text-[#1a1a1a] sm:text-[1.44rem] max-[420px]:text-[1.25rem]">
             Currently building{" "}
-            <a href="#" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-105 hover:text-[#1a5fd1]">Ankimax</a>
+            <a href="#" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">Ankimax</a>
             <span className="group relative ml-1 inline-flex">
               <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-black px-2.5 py-1 text-[0.79rem] text-white opacity-0 shadow-sm transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:-top-10 sm:mt-0">
                 Ankimax - Waitlist
               </span>
               <Image
-                src="/images/anki_icon.jpeg"
+                src="/icons/anki_icon.jpeg"
                 alt="Ankimax"
                 width={46}
                 height={46}
@@ -40,13 +40,13 @@ const Portfolio = () => {
           </p>
           <p className="flex flex-wrap items-center gap-2 text-[1.8rem] font-normal leading-[1.7] text-[#1a1a1a] sm:text-[1.44rem] max-[420px]:text-[1.25rem]">
             and studying Business Informatics{" "}
-            <a href="https://www.uni-potsdam.de/de/" target="_blank" rel="noreferrer" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-105 hover:text-[#1a5fd1]">@UniPotsdam</a>
+            <a href="https://www.uni-potsdam.de/de/" target="_blank" rel="noreferrer" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">@UniPotsdam</a>
             <a href="https://www.uni-potsdam.de/de/" target="_blank" rel="noreferrer" className="group relative ml-1 inline-flex">
               <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-black px-2.5 py-1 text-[0.79rem] text-white opacity-0 shadow-sm transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:-top-10 sm:mt-0">
                 Yes I go here.
               </span>
               <Image
-                src="/images/potsdam_icon.png"
+                src="/icons/potsdam_icon.png"
                 alt="University of Potsdam"
                 width={46}
                 height={46}
@@ -63,7 +63,7 @@ const Portfolio = () => {
           </p>
           <p className="flex flex-wrap items-center gap-2 text-[1.8rem] font-normal leading-[1.7] text-[#1a1a1a] sm:text-[1.44rem] max-[420px]:text-[1.25rem]">
             Check out my work, tech stack, and experience{" "}
-            <a href="#" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-105 hover:text-[#1a5fd1]">here.</a>
+            <a href="/tech-stack" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">here.</a>
           </p>
         </div>
 
@@ -71,15 +71,15 @@ const Portfolio = () => {
         <div className="mb-10 sm:mb-8">
           <p className="flex flex-wrap items-center gap-2 text-[1.8rem] font-normal leading-[1.7] text-[#1a1a1a] sm:text-[1.44rem] max-[420px]:text-[1.25rem]">
             Defined by my{" "}
-            <a href="#" className="inline-block text-[#1a1a1a] transition-all duration-200 hover:scale-105 hover:text-[#555]">failures.</a>{" "}
+            <a href="#" className="inline-block text-[#1a1a1a] transition-all duration-200 hover:scale-[1.02] hover:text-[#555]">failures.</a>{" "}
             Here is my{" "}
-            <a href="#" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-105 hover:text-[#1a5fd1]">story</a>
-            <a href="#" className="group relative inline-flex items-center">
+            <a href="/story" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">story</a>
+            <a href="/story" className="group relative inline-flex items-center">
               <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-black px-2.5 py-1 text-[0.79rem] text-white opacity-0 shadow-sm transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:-top-10 sm:mt-0">
                 My story
               </span>
               <Image
-                src="/images/book_icon.jpeg"
+                src="/icons/book_icon.jpeg"
                 alt="Story"
                 width={46}
                 height={46}
@@ -96,18 +96,18 @@ const Portfolio = () => {
           </p>
           <p className="flex flex-wrap items-center gap-2 text-[1.8rem] font-normal leading-[1.7] text-[#1a1a1a] sm:text-[1.44rem] max-[420px]:text-[1.25rem]">
             and documenting the world through a lens{" "}
-            <span className="group relative ml-1 inline-flex">
+            <a href="/pictures" className="group relative ml-1 inline-flex">
               <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-black px-2.5 py-1 text-[0.79rem] text-white opacity-0 shadow-sm transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:-top-10 sm:mt-0">
                 My best pictures
               </span>
               <Image
-                src="/images/camera_icon.jpeg"
+                src="/icons/camera_icon.jpeg"
                 alt="Camera"
                 width={46}
                 height={46}
                 className="h-[46px] w-[46px] rotate-[6deg] rounded-md shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-transform duration-200 hover:rotate-0 sm:h-10 sm:w-10 max-[420px]:h-9 max-[420px]:w-9"
               />
-            </span>
+            </a>
           </p>
         </div>
 
@@ -120,7 +120,7 @@ const Portfolio = () => {
                 @bobocs50
               </span>
               <Image
-                src="/images/linkedin_icon.png" 
+                src="/icons/linkedin_icon.png" 
                 alt="LinkedIn"
                 width={46}
                 height={46}
@@ -137,11 +137,11 @@ const Portfolio = () => {
         <div className="flex flex-col gap-2">
           <p className="text-[1.2rem] text-[#666]">
             Want my resume?{" "}
-            <a href="/other/PhilCV.pdf" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-105 hover:text-[#1a5fd1]">Click here.</a>
+            <a href="/other/PhilCV.pdf" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">Click here.</a>
           </p>
           <p className="text-[1.2rem] text-[#666]">
             Want to say hi?{" "}
-            <a href="mailto:bgbphilipp@gmail.com" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-105 hover:text-[#1a5fd1]">Click here.</a>
+            <a href="mailto:bgbphilipp@gmail.com" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">Click here.</a>
           </p>
           <p className="text-[1.2rem] text-[#666]">
             Change it to darkmode?{" "}
