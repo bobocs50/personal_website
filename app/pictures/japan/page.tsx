@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 
 const japanPhotos = [
   { src: "/pictures/japan/jn9.jpg", wide: true },
@@ -18,7 +19,10 @@ const JapanPicturesPage = () => {
       <div className="mx-auto w-full max-w-[1230px]">
         <p className="mb-8 text-[1rem] text-[#666]">
           <a href="/pictures" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">
-            Back to Photography
+            <span className="inline-flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
+              Back to Photography
+            </span>
           </a>
         </p>
 

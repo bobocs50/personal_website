@@ -60,7 +60,14 @@ const PicturesPage = () => {
                     </div>
                   )}
                 </div>
-                <p className="mt-3 text-[1.1rem] text-[#1a1a1a]">{country.name}</p>
+                <p className="mt-3 text-[1.1rem] text-[#1a1a1a]">
+                  {country.name}{" "}
+                  <span aria-hidden="true">
+                    {country.slug === "japan" && "🇯🇵"}
+                    {country.slug === "korea" && "🇰🇷"}
+                    {country.slug === "vietnam" && "🇻🇳"}
+                  </span>
+                </p>
               </div>
             );
 

@@ -1,14 +1,13 @@
 import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 
 const vietnamPhotos = [
-  "/pictures/vietnam/vietnam_v_6.jpg",
-  "/pictures/vietnam/vietnam_v_7.jpg",
-  "/pictures/vietnam/vietnam_v_8.jpg",
   "/pictures/vietnam/vietnam_v_1.jpg",
   "/pictures/vietnam/vietnam_v_2.jpg",
   "/pictures/vietnam/vietnam_v_3.jpg",
   "/pictures/vietnam/vietnam_v_4.jpg",
   "/pictures/vietnam/vietnam_v_5.jpg",
+  "/pictures/vietnam/vietnam_v_6.jpg",
 ];
 
 const VietnamPicturesPage = () => {
@@ -17,7 +16,10 @@ const VietnamPicturesPage = () => {
       <div className="mx-auto w-full max-w-[1230px]">
         <p className="mb-8 text-[1rem] text-[#666]">
           <a href="/pictures" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">
-            Back to Photography
+            <span className="inline-flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
+              Back to Photography
+            </span>
           </a>
         </p>
 
