@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 
 const countries = [
   {
@@ -24,7 +25,10 @@ const PicturesPage = () => {
       <div className="mx-auto w-full max-w-[980px]">
         <p className="mb-8 text-[1rem] text-[#666]">
           <a href="/" className="inline-block text-[#2E7CF6] transition-all duration-200 hover:scale-[1.02] hover:text-[#1a5fd1]">
-            Back home
+            <span className="inline-flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
+              Back home
+            </span>
           </a>
         </p>
 
